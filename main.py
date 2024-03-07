@@ -30,7 +30,7 @@ def update_data(cursor,id,nama,username,password):
 
 def delete_data(cursor,id):
     sql = "DELETE FROM `user` WHERE id = %s"
-    val = (id)
+    val = (id,)
     cursor.execute(sql,val)
     db.commit()
     print("Data telah Di hapus")
@@ -77,32 +77,6 @@ cursor.close()
 db.close()
 
         
-
-
-
-# ## contoh penggunan fungsi CRUD
-# # pilihan = input("silakan pilih 1.tambah data 2.tampil data 3.close")
-# # if pilihan == 1:
-# #     nama= input("masukan nama: ")
-# #     username=input("masukan username: ")
-# #     password=input("masukan password: ")
-# #     tambah_data(cursor,nama,username,password)
-# # elif pilihan == 2:
-# #     print("========data user =======")
-# #     tampil_data(cursor)
-# #     print("========data user =======")
-
-
-# print("========update user =======")
-# id = input("masukan id yang ingin di update: ")
-# nama = input("masukan nama yang ingin di update: ")
-# username = input("masukan username yang ingin di update: ")
-# password = input("masukan password yang ingin di update: ")
-# update_data(cursor,nama,username,password,id)
-
-# tampil_data(cursor)
-# ##MENUTUPI Koneksi Ke database
-
 
 
 
